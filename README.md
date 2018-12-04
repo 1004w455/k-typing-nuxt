@@ -1,6 +1,6 @@
-# nuxt-demo-k
+# k-typing-nuxt
 
-> ksg ksg
+> 공뷰
 
 ## Build Setup
 
