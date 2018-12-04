@@ -7,20 +7,19 @@
 </template>
 
 <script>
-  export default {
-    name: 'Error',
-    props: {
-      error: {
-        type: Object,
-        default: function () {
-          return { statusCode: 0, message: '' }
-        }
+export default {
+  name: 'Error',
+  props: {
+    error: {
+      type: Object,
+      default: function() {
+        return { statusCode: 0, message: '' }
       },
     },
-    layout: 'blog'
-  };
+  },
+  layout: 'blog',
+}
 </script>
 
 <style scoped>
-
 </style>

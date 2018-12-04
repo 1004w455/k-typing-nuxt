@@ -18,12 +18,12 @@
 </template>
 
 <script>
-  export default {
-    validate (/*{ params }*/context) {
-      // Must be a number
-      //return /^\d+$/.test(params.id)
-      console.log(context);
-      return false;
-    }
-  }
+//export default {
+//  validate (/*{ params }*/context) {
+//    // Must be a number
+//    //return /^\d+$/.test(params.id)
+//    console.log(context);
+//    return false;
+//  }
+//}
 </script>

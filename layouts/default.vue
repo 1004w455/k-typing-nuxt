@@ -82,25 +82,43 @@
     >
       <span>&copy; 2017</span>
     </v-footer>
+    <v-snackbar v-model="toast" :top="true">
+      {{toastMessage}}
+    </v-snackbar>
   </v-app>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
-      }
+export default {
+  data() {
+    return {
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [
+        { icon: 'apps', title: 'Welcome', to: '/' },
+        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
+        { icon: 'bubble_chart', title: 'Typing', to: '/typing' },
+        { icon: 'bubble_chart', title: 'Boards', to: '/boards' },
+        { icon: 'bubble_chart', title: 'Login', to: '/login' },
+        { icon: 'bubble_chart', title: 'Public', to: '/public' },
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js',
+      toast: false,
+      toastMessage: '',
     }
-  }
+  },
+  created() {
+    this.$bus.$on('toast', this.onToast)
+  },
+  methods: {
+    onToast(message) {
+      this.toast = true
+      this.toastMessage = message
+    },
+  },
+}
 </script>
